@@ -20,9 +20,12 @@ class Blog:
         self.title = title
         self.created_date = datetime.now()
         self.published_date = datetime.now()
-        file = open("articles/"+title+".txt","w")
-        file.write(content)
-        file.close()
+        text_file = open("articles/"+title+".txt","w")
+        text_file.write(content)
+        text_file.close()
+        html_file = open("articles/"+title+".html","w")
+        html_file.write(content)
+        html_file.close()
         return self.title
     
     def display_article(self):
@@ -35,6 +38,9 @@ class Blog:
         file = open("articles/"+title+".txt","a")
         file.write(content)
         file.close()
+        html_file = open("articles/"+title+".html","a")
+        html_file.write(content)
+        html_file.close()
         return self.title
     
     def remove_article(self):
@@ -57,11 +63,9 @@ if __name__=='__main__':
     article_1 = Blog()
     article_1.update_article("clearing_land",
 """
-how about we add
-a paragraph with 
-sentence 1 
-sentence 2
-sentence 3
+
+waiting.....
+
 """
 )
 # print(article_1.title+" has been successfully published at ",article_1.created_date)
