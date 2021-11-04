@@ -61,12 +61,12 @@ below is the testing procedure that we shall use
 """
 if __name__=='__main__':
     article_1 = Blog()
-    article_1.update_article("clearing_land",
+    article_1.publish_article("fencing_and_designing_land",
 """
 
-waiting.....
+
 
 """
 )
-# print(article_1.title+" has been successfully published at ",article_1.created_date)
-print(article_1.title+" has been successfully updated at ",article_1.updated_date)
+print(article_1.title+" has been successfully published at ",article_1.created_date)
+# print(article_1.title+" has been successfully updated at ",article_1.updated_date)
